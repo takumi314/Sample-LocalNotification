@@ -14,6 +14,8 @@
 		E141D1AC20C5928C00557220 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E141D1AA20C5928C00557220 /* LaunchScreen.storyboard */; };
 		E141D1B720C5928C00557220 /* Sample_LocalNotificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E141D1B620C5928C00557220 /* Sample_LocalNotificationTests.swift */; };
 		E141D1C320C594C600557220 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E141D1C220C594C600557220 /* UserNotifications.framework */; };
+		E141D1C520C843B900557220 /* NotificationReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E141D1C420C843B900557220 /* NotificationReceiver.swift */; };
+		E141D1C620C843B900557220 /* NotificationReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E141D1C420C843B900557220 /* NotificationReceiver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,7 @@
 		E141D1B620C5928C00557220 /* Sample_LocalNotificationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample_LocalNotificationTests.swift; sourceTree = "<group>"; };
 		E141D1B820C5928C00557220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E141D1C220C594C600557220 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		E141D1C420C843B900557220 /* NotificationReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationReceiver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,7 @@
 				E141D1A820C5928C00557220 /* Assets.xcassets */,
 				E141D1AA20C5928C00557220 /* LaunchScreen.storyboard */,
 				E141D1AD20C5928C00557220 /* Info.plist */,
+				E141D1C420C843B900557220 /* NotificationReceiver.swift */,
 			);
 			path = "Sample-LocalNotification";
 			sourceTree = "<group>";
@@ -213,6 +217,7 @@
 			files = (
 				E141D1A420C5928C00557220 /* ViewController.swift in Sources */,
 				E141D1A220C5928C00557220 /* AppDelegate.swift in Sources */,
+				E141D1C520C843B900557220 /* NotificationReceiver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E141D1B720C5928C00557220 /* Sample_LocalNotificationTests.swift in Sources */,
+				E141D1C620C843B900557220 /* NotificationReceiver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
