@@ -21,9 +21,19 @@ class NotificationReceiver: NSObject {
         super.init()
 
         center.delegate = self
+
+        // 通知の許可を得る
+        center.requestAuthorization(options: [.alert, .badge, .sound ]) {
+            (granted: Bool, error: Error?) in
+            if let e = error {
+                print(e.localizedDescription)
+            } else if granted {
+                print("authorized")
+            }
+        }
     }
 
-    func request(_ request: UNNotificationRequest) {
+    func set(_ request: UNNotificationRequest) {
         requests.append(request.identifier)
         center.add(request) { (error: Error?) in
             if let e = error {
@@ -32,12 +42,16 @@ class NotificationReceiver: NSObject {
         }
     }
 
-    func cancel(with identifiers: [String]) {
+    func abort(with identifiers: [String]) {
         center.removePendingNotificationRequests(withIdentifiers: identifiers)
     }
 
     func reset() {
         center.removeAllPendingNotificationRequests()
+    }
+
+    func resetBadge() {
+        UIApplication.shared.applicationIconBadgeNumber = 0
     }
 
 }
