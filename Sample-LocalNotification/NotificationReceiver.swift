@@ -78,6 +78,20 @@ extension NotificationReceiver: UNUserNotificationCenterDelegate {
 
         print("The user responded to the notification.")
 
+        /// each executions up to user's action.
+        switch response.userAction {
+        case .dismiss:
+            print("the user dismissed the notification")
+            break
+        case .default:
+            print("the user opened the application from the notification")
+            break
+        case .snooze:
+            break
+        case .stop:
+            break
+        }
+
         // Reset the budge
         UIApplication.shared.applicationIconBadgeNumber = 0
     }
