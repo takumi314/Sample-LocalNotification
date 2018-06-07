@@ -19,7 +19,9 @@ class NotificationReceiver: NSObject {
     init(_ center: UNUserNotificationCenter = .current()) {
         self.center = center
         super.init()
+    }
 
+    func setup() {
         center.delegate = self
 
         // 通知の許可を得る
